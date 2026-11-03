@@ -1,0 +1,950 @@
+{
+ "computed": "2026-11-04",
+ "broken_threshold": 0.5,
+ "half_life": {
+  "random": {
+   "defences": 63,
+   "broken": 2,
+   "half_life_days": null,
+   "half_life": "not reached"
+  },
+  "v0": {
+   "defences": 3,
+   "broken": 2,
+   "half_life_days": 146,
+   "half_life": "146 days"
+  },
+  "any": {
+   "defences": 66,
+   "broken": 4,
+   "half_life_days": null,
+   "half_life": "not reached"
+  }
+ },
+ "defences": [
+  {
+   "defence": "detector:behaviour-2607.26935",
+   "solver": "v0",
+   "since": "2026-07-29",
+   "trend": [
+    [
+     "2026-11-04",
+     0.0,
+     2
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "detector:botd",
+   "solver": "v0",
+   "since": "2025-11-04",
+   "trend": [
+    [
+     "2026-11-04",
+     1.0,
+     2
+    ]
+   ],
+   "first_broken": "2026-11-04",
+   "days_since_first_broken": 0
+  },
+  {
+   "defence": "detector:creepjs",
+   "solver": "v0",
+   "since": "2026-06-11",
+   "trend": [
+    [
+     "2026-11-04",
+     1.0,
+     2
+    ]
+   ],
+   "first_broken": "2026-11-04",
+   "days_since_first_broken": 0
+  },
+  {
+   "defence": "halligan/amazon",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/card",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/counting",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/dice_pair",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/galaxies",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/hand_number",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/rotated",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/square_icon",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/3d_rollball_objects",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/dice_match",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/numbermatch",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/orbit_match_game",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/rockstack",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/baidu",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/botdetect",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/gobang",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/icon",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/iconcrush",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/slide",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/lemin",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/mtcaptcha",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/recaptchav2",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/tencent",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/yandex/kaleidoscope",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/yandex/text",
+   "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_anywhere",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     1.0,
+     3
+    ]
+   ],
+   "first_broken": "2026-11-03",
+   "days_since_first_broken": 1
+  },
+  {
+   "defence": "hll/click_icon",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_icon_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_real",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_real_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_trace",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     1.0,
+     3
+    ]
+   ],
+   "first_broken": "2026-11-03",
+   "days_since_first_broken": 1
+  },
+  {
+   "defence": "hll/five_line",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/five_line_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/image_grid",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/image_grid_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/logic_arithmetic_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/missing_piece",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/missing_piece_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle_click",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle_real",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle_real_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider_real",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider_real_dynamic",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/text",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/text_trace",
+   "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/3D_Viewpoint",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Backmost_Layer",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Box_Folding",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Color_Counting",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Dice_Roll_Path",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Dynamic_Jigsaw",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Hole_Counting",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Illusory_Ribbons",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Layered_Stack",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Mirror",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Multi_Script",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Occluded_Pattern_Counting",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Red_Dot",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     2
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+tick 2026-11-03T12:39:00Z
+ Container captcha-bench-halligan-1 Running 
+ Container captcha-bench-hll-1 Running 
+ Container captcha-bench-ocw-1 Running 
+ Container captcha-bench-nextgen-1 Running 
+PASS ocw right
+PASS ocw wrong
+PASS ocw leak closed
+PASS nextgen leak closed
+PASS nextgen wrong
+PASS halligan right
+PASS halligan wrong
+PASS hll wrong
+PASS hll debug answers off
+PASS ocw tap
+PASS nextgen tap
+PASS halligan tap
+PASS hll tap
+run 20261103-proof: 2 tasks x ['random', 'v0', 'tiered'] -> bench/results/runs/20261103-proof.jsonl
+[random 1/2] hll/click/fresh-0 fail 2.68s random
+[random 2/2] hll/click/fresh-1 fail 2.04s random
+[v0 1/2] hll/click/fresh-0 no-submit 12.61s v0:exit4:none
+[v0 2/2] hll/click/fresh-1 no-submit 12.67s v0:exit4:none
+[tiered 1/2] hll/click/fresh-0 no-submit 11.0s tiered:exit0
+[tiered 2/2] hll/click/fresh-1 no-submit 11.07s tiered:exit0
+127.0.0.1 - - [04/Nov/2026 01:39:56] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:39:56] "GET /detect.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:39:56] "GET /vendor/fpscanner-1.0.8.es.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:39:56] "GET /vendor/botd-2.0.0.esm.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:39:56] code 404, message File not found
+127.0.0.1 - - [04/Nov/2026 01:39:56] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 01:40:41] "GET /creepjs/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:41] "GET /creepjs/style.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:41] "GET /creepjs/creep.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:41] "GET /creepjs/creep.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 01:40:41] "GET /creepjs/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:42] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:42] "GET /detect.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:42] "GET /vendor/fpscanner-1.0.8.es.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:42] "GET /vendor/botd-2.0.0.esm.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:42] code 404, message File not found
+127.0.0.1 - - [04/Nov/2026 01:40:42] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 01:40:55] "GET /creepjs/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:55] "GET /creepjs/style.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:55] "GET /creepjs/creep.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:55] "GET /creepjs/creep.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 01:40:56] "GET /creepjs/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:56] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:56] "GET /detect.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:56] "GET /vendor/botd-2.0.0.esm.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:56] "GET /vendor/fpscanner-1.0.8.es.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:40:56] code 404, message File not found
+127.0.0.1 - - [04/Nov/2026 01:40:56] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2026 01:41:10] "GET /creepjs/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:41:10] "GET /creepjs/creep.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:41:10] "GET /creepjs/style.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2026 01:41:10] "GET /creepjs/creep.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Nov/2026 01:41:10] "GET /creepjs/favicon.ico HTTP/1.1" 200 -
+replica+v0   botd                   not flagged  {"bot": false}
+replica+v0   fpscanner              n/a  {"error": "Error: fpscanner timed out"}
+replica+v0   creepjs                not flagged  {"headlessRating": 0, "likeHeadlessRating": 44, "stealthRating": 0, "fired": {"headless": [], "stealth": [], "likeHeadless": ["hasKnownBgColor", "prefersLightCo
+replica+v0   behaviour-2607.26935   FLAGGED  {"session_s": 45.06, "mousemove": 138, "clicks": 4, "mouse_event_rate_hz": 3.06, "active_rate_hz": 45.2, "teleport_click_ratio": 0, "pointerrawupdate": 153, "un
+pw-headless  botd                   FLAGGED  {"bot": true, "botKind": "headless_chrome"}
+pw-headless  fpscanner              FLAGGED  {"hasWebdriver": {"detected": true, "severity": "high"}, "hasWebdriverWritable": {"detected": true, "severity": "high"}, "hasCDP": {"detected": true, "severity"
+pw-headless  creepjs                FLAGGED  {"headlessRating": 100, "likeHeadlessRating": 56, "stealthRating": 0, "fired": {"headless": ["webDriverIsOn", "hasHeadlessUA", "hasHeadlessWorkerUA"], "stealth"
+pw-headless  behaviour-2607.26935   FLAGGED  {"session_s": 13.23, "mousemove": 14, "clicks": 4, "mouse_event_rate_hz": 1.06, "active_rate_hz": 87.3, "teleport_click_ratio": 0, "pointerrawupdate": 14, "untr
+pw-headed    botd                   FLAGGED  {"bot": true, "botKind": "headless_chrome"}
+pw-headed    fpscanner              FLAGGED  {"hasWebdriver": {"detected": true, "severity": "high"}, "hasWebdriverWritable": {"detected": true, "severity": "high"}, "hasCDP": {"detected": true, "severity"
+pw-headed    creepjs                FLAGGED  {"headlessRating": 33, "likeHeadlessRating": 50, "stealthRating": 0, "fired": {"headless": ["webDriverIsOn"], "stealth": [], "likeHeadless": ["hasKnownBgColor",
+pw-headed    behaviour-2607.26935   FLAGGED  {"session_s": 13.25, "mousemove": 15, "clicks": 4, "mouse_event_rate_hz": 1.13, "active_rate_hz": 97.1, "teleport_click_ratio": 0, "pointerrawupdate": 14, "untr
+{
+ "random": {
+  "defences": 63,
+  "broken": 2,
+  "half_life_days": null,
+  "half_life": "not reached"
+ },
+ "v0": {
+  "defences": 3,
+  "broken": 2,
+  "half_life_days": 146,
+  "half_life": "146 days"
+ },
+ "any": {
+  "defences": 66,
+  "broken": 4,
+  "half_life_days": null,
+  "half_life": "not reached"
+ }
+}
