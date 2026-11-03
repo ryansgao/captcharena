@@ -1,0 +1,9 @@
+[project]
+name = "captcha-bench"
+version = "0.1.0"
+description = "One harness over the open CAPTCHA clone suites, plus the half-life clock"
+requires-python = ">=3.11"
+dependencies = ["playwright==1.64.0", "pillow", "numpy"]
+
+[tool.uv]
+package = false

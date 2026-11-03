@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bench detector page</title>
+<style>
+  body { font: 15px system-ui, sans-serif; margin: 40px; }
+  .row { display: flex; gap: 40px; margin: 40px 0; }
+  button { font-size: 16px; padding: 14px 28px; }
+  #track { position: relative; width: 420px; height: 44px; background: #e5e7eb; border-radius: 22px; }
+  #knob { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 22px; background: #4f46e5; cursor: grab; }
+  pre { font-size: 12px; background: #f3f4f6; padding: 10px; max-height: 300px; overflow: auto; }
+</style>
+</head>
+<body>
+<h1>Detector page (local, bench only)</h1>
+<p>Click A, then B, then C, then drag the knob to the right end.</p>
+<div class="row"><button id="a">A</button><button id="b">B</button><button id="c">C</button></div>
+<div id="track"><div id="knob"></div></div>
+<pre id="out">running…</pre>
+<script type="module" src="detect.js"></script>
+</body>
+</html>

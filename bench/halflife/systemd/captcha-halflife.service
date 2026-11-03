@@ -1,0 +1,9 @@
+[Unit]
+Description=CAPTCHA half-life clock: re-run the frozen sample and the bot detectors, recompute half-lives (captcha/bench)
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=bench/halflife/weekly.sh
+TimeoutStartSec=4h
+Nice=10

@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly tick of the CAPTCHA half-life clock (Mondays 04:30 UTC)
+
+[Timer]
+OnCalendar=Mon *-*-* 04:30:00 UTC
+Persistent=true
+RandomizedDelaySec=10min
+
+[Install]
+WantedBy=timers.target
