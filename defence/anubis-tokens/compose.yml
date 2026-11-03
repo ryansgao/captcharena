@@ -1,0 +1,70 @@
+# Tokens in Anubis (C5): ppgate in front of an unmodified Anubis. A valid Privacy Pass token or a valid Web Bot Auth
+# signature goes straight to the backend; everyone else gets Anubis's proof of work, and a solved pass can buy up
+# to GATE_TOKENS_PER_PASS unlinkable tokens. Deployed from the owner's machine as `captcha-anubis` (anubis.captcharena.org).
+# .env (never in git): ANUBIS_ED25519_PRIVATE_KEY_HEX (Anubis signs its pass cookie) and GATE_ANUBIS_PUBLIC_HEX
+# (the gate checks it); `ppgate keygen` makes both. The `wba` service reuses the observatory image, so deploy
+# captcha-observatory on the same machine first (or build ../observatory locally).
+x-hardening: &hardening
+  restart: unless-stopped
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  pids_limit: 100
+services:
+  gate:
+    <<: *hardening
+    build: .
+    image: captcha-anubis-gate:local
+    ports: ["127.0.0.1:${GATE_PORT:-8330}:8080"]
+    env_file: [.env]
+    environment:
+      GATE_ORIGIN: ${GATE_ORIGIN:-anubis.captcharena.org}
+      GATE_ANUBIS_URL: http://anubis:8923
+      GATE_BACKEND_URL: http://backend:80
+      GATE_WBA_VERIFY_URL: http://wba:8000/api/verify-request
+      GATE_TOKENS_PER_PASS: "10"
+      GATE_REAL_IP_HEADER: ${GATE_REAL_IP_HEADER:-CF-Connecting-IP}
+      GATE_TRUSTED_ISSUERS: ${GATE_TRUSTED_ISSUERS:-}
+    volumes: [gatedata:/data]
+    depends_on: [anubis, backend, wba]
+    mem_limit: 128m
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/.well-known/ppgate-health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  anubis:
+    <<: *hardening
+    image: ghcr.io/techarohq/anubis:v1.28.2
+    environment:
+      BIND: ":8923"
+      TARGET: http://backend:80
+      POLICY_FNAME: /policy/botPolicy.yaml
+      ED25519_PRIVATE_KEY_HEX: ${ANUBIS_ED25519_PRIVATE_KEY_HEX:?missing from .env}
+      DIFFICULTY: "4"
+      SERVE_ROBOTS_TXT: "false"
+      DYNAMIC_COOKIE_SUFFIX: "false"
+    volumes: ["./policy:/policy:ro"]
+    tmpfs: [/tmp]
+    mem_limit: 128m
+  backend:
+    <<: *hardening
+    image: caddy:2-alpine
+    cap_add: [NET_BIND_SERVICE] # the caddy binary carries this file capability; exec fails without it
+    volumes: ["./backend/Caddyfile:/etc/caddy/Caddyfile:ro"]
+    tmpfs: [/config, /data]
+    mem_limit: 64m
+  wba:
+    <<: *hardening
+    image: captcha-observatory:local
+    pull_policy: never
+    environment:
+      OBSERVATORY_VERIFY_API: "1"
+      OBSERVATORY_PROBE: "0"
+      OBSERVATORY_DB: /data/verifier.sqlite
+    volumes: [wbadata:/data]
+    tmpfs: [/tmp]
+    mem_limit: 128m
+volumes:
+  gatedata:
+  wbadata:

@@ -1,0 +1,10 @@
+# The protected page. It says which way the request came in: the gate sets X-Gate-Pass when a token or an agent
+# signature let the visitor skip Anubis; otherwise Anubis forwarded it after a solved proof of work.
+:80 {
+	header Content-Type "text/plain; charset=utf-8"
+	@gate header X-Gate-Pass *
+	respond @gate "Protected page reached without proof of work. Pass: {http.request.header.X-Gate-Pass}
+" 200
+	respond "Protected page reached after Anubis proof of work.
+" 200
+}

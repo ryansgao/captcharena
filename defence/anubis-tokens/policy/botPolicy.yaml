@@ -1,0 +1,9 @@
+# Anubis policy for the token demo: every page costs proof of work unless the gate in front sent the request
+# straight to the backend (valid Privacy Pass token or valid Web Bot Auth signature). Anubis itself is unmodified.
+bots:
+  - name: everything
+    path_regex: ^/.*$
+    action: CHALLENGE
+    challenge:
+      difficulty: 4
+      algorithm: fast
