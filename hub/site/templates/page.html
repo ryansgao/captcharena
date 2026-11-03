@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+  <header class="page-head">
+    {%- if page.ancestors | length > 1 %}{% set last_anc = page.ancestors | last %}{% set parent_path = "@/" ~ last_anc %}
+    {%- for item in config.extra.crumbs %}{% if item.path == parent_path %}
+    <p class="crumb"><a href="{{ get_url(path=item.path) }}">{{ item.name }}</a></p>{% endif %}{% endfor %}{% endif %}
+    <h1>{{ page.title }}</h1>
+    {%- if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    {%- if page.extra.checked %}<p class="checked">Facts on this page checked {{ page.extra.checked }}{% if page.extra.status %} · <span class="status">{{ page.extra.status }}</span>{% endif %}</p>{% endif %}
+  </header>
+  {%- if page.toc | length > 2 %}
+  <nav class="toc" aria-label="On this page"><p>On this page</p><ul>
+  {%- for h in page.toc %}<li><a href="{{ h.permalink | safe }}">{{ h.title }}</a></li>{% endfor %}
+  </ul></nav>{% endif %}
+  <div class="prose">
+  {{ page.content | safe }}
+  </div>
+</article>
+{% endblock content %}
+{% block scripts %}{% if page.extra.script %}<script src="{{ get_url(path='assets/' ~ page.extra.script, cachebust=true) }}" defer></script>{% endif %}{% endblock scripts %}

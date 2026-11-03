@@ -1,0 +1,47 @@
+# CAPTCHArena hub — Zola (https://www.getzola.org) static site. Built inside the container (Dockerfile stage 1);
+# local check: see ../README.md.
+base_url = "https://captcharena.org"
+title = "CAPTCHArena"
+description = "A neutral, living guide to CAPTCHAs: how they work, how AI agents fare against them, which one fits your site, and the measured data behind it."
+default_language = "en"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+generate_sitemap = true
+generate_robots_txt = true
+
+[markdown]
+smart_punctuation = false
+external_links_target_blank = false
+external_links_no_referrer = true
+render_emoji = false
+insert_anchor_links = "none"
+
+[link_checker]
+# `zola check` validates every internal @/ link and anchor at build time.
+internal_level = "error"
+
+[extra]
+measure_url = "https://measure.captcharena.org"
+summary_url = "https://measure.captcharena.org/api/summary"
+warmup_until = "2026-11-10"
+nav = [
+  { name = "Learn", path = "@/learn/_index.md" },
+  { name = "Play", path = "@/play/_index.md" },
+  { name = "Scoreboard", path = "@/scoreboard/_index.md" },
+  { name = "Browser score", path = "@/browser-score/_index.md" },
+  { name = "Defend", path = "@/defend/_index.md" },
+  { name = "Build", path = "@/build/_index.md" },
+  { name = "Research", path = "@/research/_index.md" },
+]
+# Short names for breadcrumbs (every section that has child pages).
+crumbs = [
+  { name = "Learn", path = "@/learn/_index.md" },
+  { name = "Play", path = "@/play/_index.md" },
+  { name = "Scoreboard", path = "@/scoreboard/_index.md" },
+  { name = "Browser score", path = "@/browser-score/_index.md" },
+  { name = "Defend", path = "@/defend/_index.md" },
+  { name = "Build", path = "@/build/_index.md" },
+  { name = "Research", path = "@/research/_index.md" },
+  { name = "About", path = "@/about/_index.md" },
+]

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if page %}{% set p_title = page.title %}{% set p_desc = page.description | default(value=config.description) %}{% set p_url = page.permalink %}
+{%- elif section %}{% set p_title = section.title %}{% set p_desc = section.description | default(value=config.description) %}{% set p_url = section.permalink %}
+{%- else %}{% set p_title = "Page not found" %}{% set p_desc = config.description %}{% set p_url = config.base_url ~ "/404.html" %}{% endif %}
+{%- if current_path and current_path == "/" %}{% set full_title = config.title ~ " — " ~ p_title %}{% else %}{% set full_title = p_title ~ " | " ~ config.title %}{% endif %}
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ p_desc }}">
+<link rel="canonical" href="{{ p_url }}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ p_title }}">
+<meta property="og:description" content="{{ p_desc }}">
+<meta property="og:url" content="{{ p_url }}">
+<meta property="og:image" content="{{ get_url(path='assets/og-card.png', cachebust=true) }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CAPTCHArena: a neutral, living guide to CAPTCHAs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="{{ get_url(path='favicon.svg', cachebust=true) }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ get_url(path='assets/site.css', cachebust=true) }}">
+{% block head %}{% endblock head %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ config.base_url }}/">CAPTCHA<span>rena</span></a>
+    <nav aria-label="Sections">
+      <ul>
+      {%- for item in config.extra.nav %}
+        {%- set url = get_url(path=item.path) %}
+        <li><a href="{{ url }}"{% if current_path and url == config.base_url ~ current_path %} aria-current="page"{% endif %}>{{ item.name }}</a></li>
+      {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+{% block content %}{% endblock content %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="safety"><strong>Safety:</strong> a real CAPTCHA never asks you to press Win+R, open a terminal, paste a command or download a file. If one does, close the page. <a href="{{ get_url(path='@/learn/is-this-captcha-real.md') }}">How to spot a fake CAPTCHA</a>.</p>
+    <p>Neutral by design: no vendor money, no affiliate links, no ads, no third-party scripts, no cookies. Every fact carries the date it was checked and a link to its source. <a href="{{ get_url(path='@/about/_index.md') }}">About and method</a> · <a href="{{ get_url(path='@/contact/_index.md') }}">Contact</a> · <a href="{{ get_url(path='@/about/changelog.md') }}">Changelog</a></p>
+    <p class="small">Text licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Site built {{ now() | date(format="%Y-%m-%d") }}.</p>
+  </div>
+</footer>
+{% block scripts %}{% endblock scripts %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+{#- Components usable from Markdown content (Zola 0.23 / Tera 2). Block form, always on their own lines:
+    {% <coming> %} … {% </coming> %}   {% <note> %} … {% </note> %}   {{ <live_summary /> }}   {{ <doors /> }} -#}
+{% component coming() %}<aside class="coming" role="note"><p class="tag">Coming</p>
+
+{{ body }}
+
+</aside>{% endcomponent coming %}
+
+{% component note() %}<aside class="note" role="note">
+
+{{ body }}
+
+</aside>{% endcomponent note %}
+
+{% component live_summary(summary_url="https://measure.captcharena.org/api/summary", measure_url="https://measure.captcharena.org", warmup_until="2026-11-10") %}<section id="live-summary" class="wide" data-src="{{ summary_url }}" data-state="pending" aria-live="polite" aria-labelledby="live-summary-h">
+<h2 id="live-summary-h">Latest results from the measurement page</h2>
+<div class="result">
+<p><strong>First results after the 7-day warm-up, ~{{ warmup_until }}.</strong> Our domain is new, and Google warns that reCAPTCHA scores in a site's first week may differ from later ones, so nothing is published before the warm-up ends. When the measurement service publishes its summary, this box fills in by itself from <a href="{{ summary_url }}">{{ summary_url }}</a>.</p>
+</div>
+<p class="meta">Data source: <a href="{{ measure_url }}">{{ measure_url }}</a>. Raw verdicts come from each vendor's own server check.</p>
+</section>{% endcomponent live_summary %}
+
+{% component doors() %}<nav class="doors" aria-label="Start here">
+<a href="{{ get_url(path='@/defend/_index.md') }}"><strong>I run a site</strong>Which CAPTCHA fits, whether it still works against AI, what it costs an attacker, accessibility.</a>
+<a href="{{ get_url(path='@/build/_index.md') }}"><strong>I build agents</strong>The legitimate path: signing your agent, handing off to the human, the policy map.</a>
+<a href="{{ get_url(path='@/research/_index.md') }}"><strong>I research</strong>A dated literature map of every attack and defence, benchmarks, open questions.</a>
+<a href="{{ get_url(path='@/learn/_index.md') }}"><strong>I'm curious</strong>What happens when you tick the box, every vendor explained, and how to spot a fake CAPTCHA.</a>
+</nav>{% endcomponent doors %}
