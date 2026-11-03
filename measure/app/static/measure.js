@@ -154,8 +154,27 @@ async function setupAltcha(cfg) {
   setVerdict("altcha", "working…");
 }
 
-function setupCap(cfg) {
+async function setupCap(cfg) {
   if (!cfg.cap) return off("cap", "not set up yet");
+  // Our own copies of the proof-of-work WASM; the widget would otherwise fetch them from jsDelivr (CSP blocks it).
+  window.CAP_CUSTOM_WASM_URL = "/static/vendor/cap-wasm-0.0.8.wasm";
+  window.CAP_CUSTOM_HASHWX_URL = "/static/vendor/cap-hashwx-0.0.8.wasm";
+  try { await loadScript("/static/vendor/cap-widget-0.1.58.min.js"); }
+  catch (e) { return setVerdict("cap", e.message, "fail"); }
+  const w = document.createElement("cap-widget");
+  w.setAttribute("data-cap-api-endpoint", cfg.cap.endpoint);
+  let t = performance.now();
+  let sent = false;
+  w.addEventListener("progress", () => { if (!sent) setVerdict("cap", "working…"); }, { once: true });
+  w.addEventListener("solve", e => {
+    if (sent || !e.detail || !e.detail.token) return;
+    sent = true;
+    verify("cap", e.detail.token, { solve_ms: Math.round(performance.now() - t) });
+  });
+  w.addEventListener("error", e => setVerdict("cap", "widget error " + ((e.detail && e.detail.message) || ""), "fail"));
+  w.addEventListener("click", () => { t = performance.now(); }, { capture: true });
+  $("w-cap").appendChild(w);
+  setVerdict("cap", "click the box");
 }
 
 async function main() {

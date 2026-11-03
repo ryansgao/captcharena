@@ -21,5 +21,30 @@ services:
       interval: 30s
       timeout: 6s
       retries: 3
+  # Cap (tiagozip/cap, Apache-2.0) standalone server: the fifth lane. Reached only by `measure` over the compose
+  # network (/cap/<site>/challenge|redeem proxied, siteverify server-side); no published port. ADMIN_KEY in .env.
+  cap:
+    image: tiago2/cap:3.1.17
+    environment:
+      ADMIN_KEY: ${ADMIN_KEY:?ADMIN_KEY missing from .env}
+      REDIS_URL: redis://valkey:6379
+      RATELIMIT_IP_HEADER: cf-connecting-ip
+    depends_on: [valkey]
+    restart: unless-stopped
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 384m
+    pids_limit: 200
+  valkey:
+    image: valkey/valkey:9.0.7-alpine3.24
+    command: ["valkey-server", "--appendonly", "yes", "--save", "60", "1"]
+    volumes: [capdata:/data]
+    restart: unless-stopped
+    cap_drop: [ALL]
+    cap_add: [SETUID, SETGID]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+    pids_limit: 100
 volumes:
   runs:
+  capdata:
