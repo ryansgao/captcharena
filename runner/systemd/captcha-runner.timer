@@ -1,0 +1,14 @@
+# Every 30 minutes, all day: the loads spread across the day (deep-2 §6.3 step 5). No catch-up burst after downtime
+# (Persistent=false): a missed batch is simply missed. Paired with captcha-runner.service.
+[Unit]
+Description=CAPTCHA browser-score experiment: a batch every 30 minutes
+
+[Timer]
+OnCalendar=*:05/30
+RandomizedDelaySec=4min
+AccuracySec=30s
+Persistent=false
+Unit=captcha-runner.service
+
+[Install]
+WantedBy=timers.target
