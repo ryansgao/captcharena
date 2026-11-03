@@ -70,7 +70,7 @@ CSP = "; ".join([
     "default-src 'self'",
     "script-src 'self' 'wasm-unsafe-eval' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://challenges.cloudflare.com",
     "frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://challenges.cloudflare.com",
-    "connect-src 'self'",
+    "connect-src 'self' https://www.google.com/recaptcha/ https://challenges.cloudflare.com",
     "worker-src 'self' blob:",
     "img-src 'self' data:",
     "style-src 'self' 'unsafe-inline'",
