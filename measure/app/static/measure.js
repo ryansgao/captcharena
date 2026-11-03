@@ -35,9 +35,12 @@ async function verify(lane, token, extra = {}) {
     const r = await resp.json();
     const [text, cls] = describe(r);
     setVerdict(lane, text + (extra.solve_ms ? ` · ${(extra.solve_ms / 1000).toFixed(1)} s` : ""), cls);
-    document.body.dataset["done_" + lane] = r.success ? "pass" : "fail";   // for the runner
+    // For the runner: pass / fail (the server's verdict), capped (daily budget used up, nothing logged), error.
+    document.body.dataset["result_" + lane] = JSON.stringify({ ...r, interactive: extra.interactive ?? null });
+    document.body.dataset["done_" + lane] = resp.status === 429 ? "capped" : r.error ? "error" : r.success ? "pass" : "fail";
   } catch (e) {
     setVerdict(lane, "could not reach our server: " + e, "fail");
+    document.body.dataset["done_" + lane] = "error";
   }
 }
 
@@ -94,9 +97,24 @@ function setupRecaptcha(cfg) {
   window.__onRecaptcha = () => {
     if (v2) {
       const t = performance.now();
+      // "interactive" for v2 = Google showed its picture/audio challenge before passing. The challenge frame is
+      // always in the page; it is shown by making it visible and moving it on screen.
+      let challenged = false;
+      const watch = setInterval(() => {
+        for (const f of document.querySelectorAll('iframe[src*="/recaptcha/api2/bframe"], iframe[src*="/recaptcha/enterprise/bframe"]')) {
+          const r = f.getBoundingClientRect();
+          if (getComputedStyle(f).visibility === "visible" && r.width > 100 && r.height > 100 && r.top > -1000) {
+            challenged = true;
+            document.body.dataset.challenged_recaptcha_v2 = "1";
+          }
+        }
+      }, 250);
       grecaptcha.render("w-recaptcha_v2", {
         sitekey: v2.site,
-        callback: token => verify("recaptcha_v2", token, { solve_ms: Math.round(performance.now() - t) }),
+        callback: token => {
+          clearInterval(watch);
+          verify("recaptcha_v2", token, { solve_ms: Math.round(performance.now() - t), interactive: challenged });
+        },
         "expired-callback": () => setVerdict("recaptcha_v2", "token expired; tick again"),
       });
       setVerdict("recaptcha_v2", "tick the box");
@@ -123,7 +141,7 @@ function setupTurnstile(cfg) {
     const t = performance.now();
     turnstile.render("#w-turnstile", {
       sitekey: ts.site, action: "measure",
-      "before-interactive-callback": () => { interactive = true; },
+      "before-interactive-callback": () => { interactive = true; document.body.dataset.challenged_turnstile = "1"; },
       callback: token => verify("turnstile", token, { solve_ms: Math.round(performance.now() - t), interactive }),
       "error-callback": code => { setVerdict("turnstile", "widget error " + code, "fail"); return true; },
     });
@@ -178,6 +196,7 @@ async function setupCap(cfg) {
 }
 
 async function main() {
+  document.body.dataset.run = runId;
   $("ver").textContent = `run ${runId}${condition ? " · condition " + condition : ""}`;
   let cfg = {};
   try {
