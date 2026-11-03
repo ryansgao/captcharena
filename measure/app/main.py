@@ -30,6 +30,10 @@ LOG = pathlib.Path(os.environ.get("MEASURE_LOG", "/data/runs.jsonl"))
 # The commit this build came from: `deploy-tool deploy` writes .deployed ("<sha> <time>") into the build folder.
 _deployed = HERE.parent / ".deployed"
 VERSION = os.environ.get("MEASURE_VERSION") or (_deployed.read_text().split()[0] if _deployed.exists() else "dev")
+try:
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+except OSError:
+    pass                          # /health reports an unwritable log
 
 # Vendor test keys: they always pass and measure nothing. Used until the real keys exist; marked in every line.
 TEST_SITE_KEYS = {"6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", "1x00000000000000000000AA", "2x00000000000000000000AB",
@@ -92,6 +96,9 @@ def key_kind(site):
 
 @app.get("/health")
 def health():
+    # "Up but recording nothing" is the failure that matters here, so health fails if the run log is not writable.
+    if not os.access(LOG.parent, os.W_OK) or (LOG.exists() and not os.access(LOG, os.W_OK)):
+        return JSONResponse({"status": "cannot write the run log", "log": str(LOG)}, status_code=503)
     return {"status": "ok", "version": VERSION,
             "lanes": {k: (key_kind(v[0]) if v[0] and v[1] else "off") for k, v in LANES.items()}
             | {"altcha": "on" if ALTCHA_SECRET else "off", "cap": "on" if CAP_URL and CAP_SITE and CAP_SECRET else "off"}}
@@ -210,11 +217,15 @@ async def verify(request: Request):
     line["signals"] = bounded(client.get("signals", {}))
     line["token_sha"] = hashlib.sha256(token.encode()).hexdigest()[:16]   # spots a replayed token, keeps no token
 
-    LOG.parent.mkdir(parents=True, exist_ok=True)
-    with _lock, LOG.open("a") as fh:
-        fh.write(json.dumps(line, separators=(",", ":")) + "\n")
     shown = {k: line.get(k) for k in ("lane", "key", "success", "score", "action", "hostname", "errors",
                                       "token_age_s", "verify_ms")}
+    try:
+        with _lock, LOG.open("a") as fh:
+            fh.write(json.dumps(line, separators=(",", ":")) + "\n")
+        shown["logged"] = True
+    except OSError as e:          # the visitor still gets the verdict; /health turns 503 so the box restarts and flags it
+        print(f"run log write failed: {e}", flush=True)
+        shown["logged"] = False
     return shown
 
 
