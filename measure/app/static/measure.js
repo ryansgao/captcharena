@@ -24,7 +24,13 @@ function describe(r) {
   return [parts.join(" · "), r.success ? "pass" : "fail"];
 }
 
+// One server check per lane per page load. Widgets call back again on their own (Turnstile refreshes its token every
+// few minutes, an expired v2 tick gets re-ticked), and a tab left open would otherwise spend the daily budget.
+const sent = new Set();
+
 async function verify(lane, token, extra = {}) {
+  if (sent.has(lane)) return;
+  sent.add(lane);
   setVerdict(lane, "checking with its server…");
   try {
     const resp = await fetch("/api/verify", {
@@ -115,7 +121,7 @@ function setupRecaptcha(cfg) {
           clearInterval(watch);
           verify("recaptcha_v2", token, { solve_ms: Math.round(performance.now() - t), interactive: challenged });
         },
-        "expired-callback": () => setVerdict("recaptcha_v2", "token expired; tick again"),
+        "expired-callback": () => setVerdict("recaptcha_v2", "measured once; reload the page to measure again"),
       });
       setVerdict("recaptcha_v2", "tick the box");
     }
