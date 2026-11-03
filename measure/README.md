@@ -49,7 +49,7 @@ public visitor reusing a runner condition tag cannot be mistaken for the runner.
 
 Aggregate of the run log, nothing per visitor (no user agent, no signals, no run ids, no token hashes). Rebuilt at most
 every 30 s when the log changed; `Cache-Control: public, max-age=300, stale-while-revalidate=600`, `ETag` (answers 304
-to `If-None-Match`), `Access-Control-Allow-Origin: *` so the hub on another hostname can fetch it.
+to `If-None-Match`), `Access-Control-Allow-Origin: https://captcharena.org` (the hub fetches it from the browser; GET only, no credentials).
 
 Dropped before aggregating: lines with `"key": "test"` (counted in `excluded.test_key`), conditions with a `smoke` or
 `test` word in them (`cap-smoke`, `local-test`, `x1-….smoke`; `excluded.smoke`), unparseable lines (`excluded.unparsed`).

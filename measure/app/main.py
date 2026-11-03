@@ -391,7 +391,7 @@ def summary(request: Request):
             body = json.dumps(build_summary(), separators=(",", ":")).encode()
             _summary.update(key=key, at=time.time(), body=body, etag='"' + hashlib.sha256(body).hexdigest()[:20] + '"')
     hdrs = {"Cache-Control": "public, max-age=300, stale-while-revalidate=600", "ETag": _summary["etag"],
-            "Access-Control-Allow-Origin": "*"}
+            "Access-Control-Allow-Origin": "https://captcharena.org"}     # the hub; GET only, no credentials
     if request.headers.get("if-none-match") == _summary["etag"]:
         return Response(status_code=304, headers=hdrs)
     return Response(_summary["body"], media_type="application/json", headers=hdrs)
