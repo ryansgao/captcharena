@@ -79,6 +79,7 @@ aside > :first-child { margin-top: 0; } aside > :last-child { margin-bottom: 0; 
 .cta:hover { filter: brightness(1.08); }
 
 #live-summary { border: 1px solid var(--line); border-radius: .6rem; padding: 1rem; background: var(--card); max-width: none; }
+#live-summary a { overflow-wrap: anywhere; }
 #live-summary[data-state="loading"] .result { opacity: .6; }
 #live-summary .meta { color: var(--muted); font-size: .9rem; }
 
