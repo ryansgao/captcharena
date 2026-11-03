@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAPTCHA measurement: what each CAPTCHA's own server thinks of your browser</title>
+<meta name="description" content="Real reCAPTCHA, Cloudflare Turnstile and open-source CAPTCHAs on one page, each checked by its own server. See the verdict and score your browser gets.">
+<link rel="icon" href="/favicon.ico" type="image/svg+xml">
+<link rel="stylesheet" href="/static/style.css">
+<script type="module" src="/static/measure.js"></script>
+</head>
+<body>
+<main class="wrap">
+<h1>CAPTCHA measurement: what each CAPTCHA's own server thinks of your browser</h1>
+<p class="sub">Real CAPTCHAs, our own keys, one page. Each one hands its answer to its own vendor's server, and you see the verdict we record.</p>
+
+<div class="card notice" id="testmode" hidden>
+<b>Test keys.</b> The vendors' test keys are in use, so every check passes and nothing here measures anything yet. Real keys go in once the domain is live.
+</div>
+
+<section class="grid">
+<article class="card lane" id="lane-recaptcha_v3">
+<h2>reCAPTCHA v3 <span class="kind">invisible score</span></h2>
+<p class="what">Google scores the visit from 0.0 (likely a bot) to 1.0 (likely a human) without showing a puzzle.</p>
+<div class="widget" id="w-recaptcha_v3"></div>
+<p class="verdict" id="v-recaptcha_v3">waiting…</p>
+</article>
+
+<article class="card lane" id="lane-recaptcha_v2">
+<h2>reCAPTCHA v2 <span class="kind">tick box</span></h2>
+<p class="what">The "I'm not a robot" box. It passes on a tick or asks for a picture puzzle.</p>
+<div class="widget" id="w-recaptcha_v2"></div>
+<p class="verdict" id="v-recaptcha_v2">waiting…</p>
+</article>
+
+<article class="card lane" id="lane-turnstile">
+<h2>Cloudflare Turnstile <span class="kind">managed</span></h2>
+<p class="what">Usually passes without any click. We note whether it had to ask you to interact.</p>
+<div class="widget" id="w-turnstile"></div>
+<p class="verdict" id="v-turnstile">waiting…</p>
+</article>
+
+<article class="card lane" id="lane-altcha">
+<h2>ALTCHA <span class="kind">open source, proof of work</span></h2>
+<p class="what">Self-hosted. Your browser does a small amount of computing to prove it is willing to spend effort.</p>
+<div class="widget" id="w-altcha"></div>
+<p class="verdict" id="v-altcha">waiting…</p>
+</article>
+
+<article class="card lane" id="lane-cap">
+<h2>Cap <span class="kind">open source, proof of work</span></h2>
+<p class="what">Self-hosted, with extra checks on the browser itself.</p>
+<div class="widget" id="w-cap"></div>
+<p class="verdict" id="v-cap">waiting…</p>
+</article>
+</section>
+
+<section class="card">
+<h2>Your browser, as the page sees it</h2>
+<table id="signals"><tbody><tr><td>collecting…</td></tr></tbody></table>
+</section>
+
+<section class="card small">
+<h2>What we record</h2>
+<ul>
+<li>One line per check: which CAPTCHA, the vendor's verdict, score and error codes, how old the token was, how long it took, and whether it asked you to interact.</li>
+<li>Your browser's user agent, the signals in the table above, and the country Cloudflare reports. <b>No IP address, and no cookie of ours.</b> Google and Cloudflare set their own cookies inside their widgets.</li>
+<li>Why: to measure, over time and in the open, how CAPTCHAs judge browsers and AI agents. Nothing here is sold, and we run no CAPTCHA-solving service.</li>
+</ul>
+<p id="ver"></p>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# CAPTCHA measurement page. Deployed to the hosting server from the owner's machine (`deploy-tool deploy`); secrets in
+# .env (linked to /srv/<project>/.env on the box, never in git); the run log in the named volume `runs`.
+services:
+  measure:
+    build: .
+    image: captcha-measure:local
+    ports: ["127.0.0.1:${MEASURE_PORT:-8300}:8000"]
+    env_file: [.env]
+    environment:
+      MEASURE_LOG: /data/runs.jsonl
+    volumes: [runs:/data]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 512m
+    pids_limit: 200
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"]
+      interval: 30s
+      timeout: 6s
+      retries: 3
+volumes:
+  runs:
