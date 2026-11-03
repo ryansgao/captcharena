@@ -143,7 +143,7 @@ class TieredSolver(Solver):
 
     @property
     def version(self):
-        return subprocess.run(["git", "-C", TIERED, "log", "-1", "--format=%h"], capture_output=True,
+        return subprocess.run(["git", "-C", TIERED, "log", "-1", "--format=%h", "--", "."], capture_output=True,
                               text=True).stdout.strip() or "uncommitted"
 
     def available(self):

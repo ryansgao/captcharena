@@ -88,3 +88,4 @@ pw-headed    behaviour-2607.26935   FLAGGED  {"session_s": 13.25, "mousemove": 1
   "half_life": "not reached"
  }
 }
+done: selftest 0 run 0 detectors 0 compute 0
