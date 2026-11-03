@@ -22,7 +22,7 @@ import time
 import altcha
 import httpx
 from fastapi import FastAPI, Request
-from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 HERE = pathlib.Path(__file__).parent
@@ -87,9 +87,6 @@ async def headers(request: Request, call_next):
     resp.headers["Referrer-Policy"] = "no-referrer"
     resp.headers["X-Content-Type-Options"] = "nosniff"
     resp.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
-    if request.url.path.startswith("/static/") and "cache-control" not in resp.headers:
-        # Revalidate (etag) every load, so a deploy reaches browsers at once; Cloudflare's default was 4 h.
-        resp.headers["Cache-Control"] = "no-cache"
     return resp
 
 
@@ -234,7 +231,12 @@ async def verify(request: Request):
 
 @app.api_route("/", methods=["GET", "HEAD"])
 def index():
-    return FileResponse(HERE / "static" / "index.html", headers={"Cache-Control": "no-cache"})
+    # Version the page's own files in their URLs: Cloudflare sets a 4 h browser cache on /static/ whatever we send,
+    # so a deploy would otherwise reach returning browsers hours late.
+    html = (HERE / "static" / "index.html").read_text()
+    for f in ("style.css", "measure.js"):
+        html = html.replace(f'/static/{f}"', f'/static/{f}?v={VERSION}"')
+    return HTMLResponse(html, headers={"Cache-Control": "no-cache"})
 
 
 @app.get("/favicon.ico")
