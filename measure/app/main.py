@@ -87,6 +87,9 @@ async def headers(request: Request, call_next):
     resp.headers["Referrer-Policy"] = "no-referrer"
     resp.headers["X-Content-Type-Options"] = "nosniff"
     resp.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
+    if request.url.path.startswith("/static/") and "cache-control" not in resp.headers:
+        # Revalidate (etag) every load, so a deploy reaches browsers at once; Cloudflare's default was 4 h.
+        resp.headers["Cache-Control"] = "no-cache"
     return resp
 
 
