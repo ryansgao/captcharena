@@ -1,0 +1,8 @@
+# go-captcha-service (wenlng, Apache-2.0), unmodified, for the solver lab. Bound to loopback only.
+services:
+  gocaptcha:
+    image: wenlng/go-captcha-service:1.0.5
+    container_name: solver-lab-gocaptcha
+    ports:
+      - "127.0.0.1:18181:8080"
+    restart: "no"

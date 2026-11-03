@@ -1,0 +1,85 @@
+{
+ "signature": "gocaptcha-rotate||220x220",
+ "kind": "gocaptcha-rotate",
+ "created": "2026-11-03T20:51:55",
+ "history": [],
+ "evidence": [
+  {
+   "verdict": "pass",
+   "verdict_source": "lab-page",
+   "ts": "2026-11-03T20:51:55",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.5,
+   "step": 1,
+   "model_calls": 0
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:58",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:01",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:03",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:06",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:08",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:11",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:14",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:17",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:19",
+   "url": "http://127.0.0.1:8411/?t=go-rotate",
+   "seconds": 1.6
+  }
+ ],
+ "uses": [
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "status": "promoted",
+ "policy": {
+  "engine": "cv.rotate"
+ },
+ "origin_step": 1,
+ "updated": "2026-11-03T20:52:19"
+}
