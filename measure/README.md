@@ -15,9 +15,9 @@ to `/data/runs.jsonl` (volume `runs`) → returns the verdict, which the page sh
 
 | Lane | State 2026-11-03 | Key |
 |---|---|---|
-| reCAPTCHA v3 | off until a real key exists (no v3 test key) | a project Google account, after the domain |
-| reCAPTCHA v2 tick box | live with Google's test key | real key after the domain |
-| Turnstile (managed) | live with Cloudflare's test key; `before-interactive-callback` sets `interactive` | real key via the Turnstile token permission |
+| reCAPTCHA v3 | live, real key since 2026-11-03 06:04 UTC; warm-up to ~2026-11-10 | a project Google account (a project Google Cloud project, no billing) |
+| reCAPTCHA v2 tick box | live, real key | a project Google account |
+| Turnstile (managed) | live, real key; `before-interactive-callback` sets `interactive` | the owner's Cloudflare, widget made through the API |
 | ALTCHA (PBKDF2/SHA-256, cost 5000) | live, real (self-hosted, our HMAC secret) | `ALTCHA_HMAC_SECRET` |
 | Cap (HashWX proof of work, instrumentation off) | live, real (self-hosted: `tiago2/cap:3.1.17` + `valkey/valkey:9.0.7-alpine3.24` on the compose network, no published port; key made through its API on the box 2026-11-03). Widget 0.1.58 and its WASM vendored; browser calls go through `/cap/<site>/{challenge,redeem}`. Instrumentation stays off: it runs an inline script in a srcdoc iframe, which our CSP blocks | `ADMIN_KEY`, `CAP_URL`, `CAP_SITE`, `CAP_SECRET` |
 
