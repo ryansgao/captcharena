@@ -1,0 +1,85 @@
+{
+ "signature": "gocaptcha-slide||300x220",
+ "kind": "gocaptcha-slide",
+ "created": "2026-11-03T20:50:37",
+ "history": [],
+ "evidence": [
+  {
+   "verdict": "pass",
+   "verdict_source": "lab-page",
+   "ts": "2026-11-03T20:50:37",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.6,
+   "step": 1,
+   "model_calls": 0
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:40",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:43",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:45",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:48",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:51",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:54",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:56",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:50:59",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:02",
+   "url": "http://127.0.0.1:8411/?t=go-slide",
+   "seconds": 1.7
+  }
+ ],
+ "uses": [
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "status": "promoted",
+ "policy": {
+  "engine": "cv.slide"
+ },
+ "origin_step": 1,
+ "updated": "2026-11-03T20:51:02"
+}

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+runs/shots/
+lab/.state/
+.scratch/
+.profile/
+runs/.model-state.json
+runs/.trust.json
+cache/labels/

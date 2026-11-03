@@ -1,0 +1,14 @@
+body { font: 15px system-ui, sans-serif; margin: 24px; color: #222; }
+.captcha-box { display: inline-block; padding: 12px; border: 1px solid #ccc; border-radius: 6px; background: #fafafa; }
+.gc-instruction { margin: 0 0 8px; display: flex; align-items: center; gap: 8px; min-height: 40px; }
+.gc-body { position: relative; overflow: hidden; user-select: none; }
+.gc-body img { display: block; -webkit-user-drag: none; }
+.gc-tile { position: absolute; cursor: grab; }
+.gc-rotate .gc-body { border-radius: 50%; }
+.gc-thumb-rot { position: absolute; border-radius: 50%; }
+.gc-track { position: relative; height: 40px; margin-top: 8px; background: #e6e6e6; border-radius: 20px; }
+.gc-handle { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 20px; background: #3a7bd5; cursor: grab; touch-action: none; }
+.gc-mark { position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 10px; background: #3a7bd5; color: #fff; font: 12px/20px sans-serif; text-align: center; pointer-events: none; }
+.gc-buttons { margin-top: 8px; display: flex; gap: 8px; }
+.verdict.pass { color: #0a7a2f; } .verdict.fail { color: #b3261e; }
+#captcha-answer { font-size: 16px; padding: 6px; width: 140px; }

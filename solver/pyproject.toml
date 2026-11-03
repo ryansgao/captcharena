@@ -1,0 +1,20 @@
+[project]
+name = "captcha-solver"
+version = "0.1.0"
+description = "Tiered CAPTCHA solver: a measurement and research harness (cheapest ladder step first, learns each new type once)"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright==1.64.0",
+    "pillow",
+    "numpy",
+    "opencv-python-headless",
+    "ddddocr",
+    "faster-whisper==1.2.1",
+    "httpx",
+    "captcha",
+    "fastapi",
+    "uvicorn",
+]
+
+[tool.uv]
+package = false

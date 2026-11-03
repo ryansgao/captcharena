@@ -1,0 +1,85 @@
+{
+ "signature": "gocaptcha-drag||300x220",
+ "kind": "gocaptcha-drag",
+ "created": "2026-11-03T20:51:28",
+ "history": [],
+ "evidence": [
+  {
+   "verdict": "pass",
+   "verdict_source": "lab-page",
+   "ts": "2026-11-03T20:51:28",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.7,
+   "step": 1,
+   "model_calls": 0
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:30",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:33",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:36",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:38",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:41",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:44",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:46",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.5
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:49",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.7
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:51:52",
+   "url": "http://127.0.0.1:8411/?t=go-drag",
+   "seconds": 1.5
+  }
+ ],
+ "uses": [
+  1,
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "status": "promoted",
+ "policy": {
+  "engine": "cv.drag"
+ },
+ "origin_step": 1,
+ "updated": "2026-11-03T20:51:52"
+}

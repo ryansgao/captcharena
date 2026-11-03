@@ -1,0 +1,67 @@
+{
+ "signature": "text-image||200x70",
+ "kind": "text-image",
+ "created": "2026-11-03T20:52:38",
+ "history": [],
+ "evidence": [
+  {
+   "verdict": "pass",
+   "verdict_source": "lab-page",
+   "ts": "2026-11-03T20:52:38",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 2.9,
+   "step": 2,
+   "model_calls": 0
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:41",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 2.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:45",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 3.0
+  },
+  {
+   "verdict": "fail",
+   "ts": "2026-11-03T20:52:49",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 2.6
+  },
+  {
+   "verdict": "pass",
+   "ts": "2026-11-03T20:52:54",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 3.0
+  },
+  {
+   "verdict": "fail",
+   "ts": "2026-11-03T20:52:58",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 2.9
+  },
+  {
+   "verdict": "fail",
+   "ts": "2026-11-03T20:53:02",
+   "url": "http://127.0.0.1:8411/?t=text",
+   "seconds": 2.8
+  }
+ ],
+ "uses": [
+  1,
+  1,
+  0,
+  1,
+  0,
+  0
+ ],
+ "status": "demoted",
+ "policy": {
+  "engine": "ddddocr.ocr"
+ },
+ "origin_step": 2,
+ "updated": "2026-11-03T20:53:02"
+}
