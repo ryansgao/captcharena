@@ -78,7 +78,7 @@ def from_local(since):
         meta[c].update(arm=d["arm"], age=d.get("profile_age_days"), version=d.get("browser_version"))
         for lane, v in d["lanes"].items():
             out[c][lane]["n"] += 1
-            out[c][lane][v["done"]] += 1
+            out[c][lane]["done:" + v["done"]] += 1
             out[c][lane]["challenged"] += bool(v.get("challenged"))
             out[c][lane]["tick_only"] += v["done"] == "pass" and not v.get("challenged")
     return out, meta
@@ -129,8 +129,8 @@ def main():
                 row["local"]["v2_challenged"] = wilson(v2["challenged"], v2["n"])
             ts = loc.get("turnstile")
             if ts:
-                row["local"]["turnstile_token"] = wilson(ts["pass"], ts["n"])
-                row["local"]["turnstile_widget_error"] = wilson(ts["widget-error"], ts["n"])
+                row["local"]["turnstile_token"] = wilson(ts["done:pass"], ts["n"])
+                row["local"]["turnstile_widget_error"] = wilson(ts["done:widget-error"], ts["n"])
         result["conditions"][f"{cond} ({source})"] = row
 
     if a.json:
