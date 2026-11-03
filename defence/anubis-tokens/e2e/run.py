@@ -31,7 +31,7 @@ def check(name, ok, detail=""):
 
 
 def http(path, headers=None, method="GET", data=None):
-    req = urllib.request.Request(SITE.rstrip("/") + path, headers=headers or {}, method=method, data=data)
+    req = urllib.request.Request(SITE.rstrip("/") + path, headers={"User-Agent": "captcharena-e2e/1", **(headers or {})}, method=method, data=data)  # Cloudflare refuses the default Python UA (error 1010)
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             return r.status, r.read().decode(errors="replace"), dict(r.headers)
@@ -47,7 +47,7 @@ def client(*args):
 # 1. A plain request gets Anubis's proof-of-work page, plus a PrivateToken challenge.
 status, body, headers = http("/")
 check("no token: Anubis challenge page", "Making sure" in body, f"HTTP {status}")
-check("no token: WWW-Authenticate PrivateToken challenge offered", "PrivateToken challenge=" in headers.get("Www-Authenticate", headers.get("WWW-Authenticate", "")))
+check("no token: WWW-Authenticate PrivateToken challenge offered", "PrivateToken challenge=" in {k.lower(): v for k, v in headers.items()}.get("www-authenticate", ""))
 
 # 2. A real browser pays the proof of work once.
 with sync_playwright() as p:
