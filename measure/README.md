@@ -92,6 +92,11 @@ and `../runner/analyze.py --local` reads both. Condition tags: `../runner/README
 ## Next
 
 Domain → real reCAPTCHA v2/v3 keys (a project Google account) and Turnstile widget (the owner's token) → `--host` deploy →
-7-day warm-up with controls (deep-2 §6.3 step 1) → ~~Cap lane~~ (live 2026-11-03) → open clones (go-captcha, mCaptcha, Procaptcha).
+7-day warm-up with controls (deep-2 §6.3 step 1; ~~waiting~~ running since 2026-11-03 through `../runner/`) → ~~Cap lane~~ (live 2026-11-03) → open clones (go-captcha, mCaptcha, Procaptcha).
 
 - 2026-11-03, Cap wired (commits e140e48, ece26dd): on https://measure.captcharena.org/?c=cap-smoke in the automation browser all five lanes said "accepted by its server" (v3 score 0.9, v2 after an audio round, Turnstile, ALTCHA, Cap 1.2 s). Page files now carry `?v=<commit>`: Cloudflare forces a 4 h browser cache on /static/, which served the old script after the deploy.
+- 2026-11-03, summary feed and budgets (083a4e7 → 4cf1bda): `/api/summary` (schema above), per lane caps in a runner
+  and a public pool (the old global `MEASURE_DAILY_CAP` of 300 is gone), done flags `capped` / `error` /
+  `widget-error`, `challenged_*` flags, v2 `interactive` = challenge shown, and one server check per lane per load (a
+  smoke-test tab left open in the automation browser had the watcher re-tick v2 and Turnstile re-issue tokens every few
+  minutes, spending the public budget; that tab was closed).
