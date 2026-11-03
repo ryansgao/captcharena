@@ -1,0 +1,55 @@
+{
+  "hll_types": [
+    "text",
+    "text_trace",
+    "slider",
+    "slider_real",
+    "slider_real_dynamic",
+    "click",
+    "click_icon",
+    "click_icon_dynamic",
+    "click_anywhere",
+    "click_trace",
+    "click_real",
+    "click_real_dynamic",
+    "puzzle",
+    "puzzle_real",
+    "puzzle_real_dynamic",
+    "pic_puzzle",
+    "pic_puzzle_click",
+    "pic_puzzle_dynamic",
+    "image_grid",
+    "image_grid_dynamic",
+    "missing_piece",
+    "missing_piece_dynamic",
+    "logic_arithmetic_dynamic",
+    "five_line",
+    "five_line_dynamic"
+  ],
+  "debrand": {
+    "nextgen": {
+      "urls": 3,
+      "texts": 0,
+      "logos": 0,
+      "styles": 1
+    },
+    "ocw": {
+      "urls": 0,
+      "texts": 0,
+      "logos": 0,
+      "styles": 1
+    },
+    "halligan": {
+      "urls": 39,
+      "texts": 24,
+      "logos": 0,
+      "styles": 26
+    },
+    "hll": {
+      "urls": 0,
+      "texts": 0,
+      "logos": 0,
+      "styles": 3
+    }
+  }
+}

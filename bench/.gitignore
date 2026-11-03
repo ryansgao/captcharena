@@ -1,0 +1,9 @@
+# third-party sources and build contexts: fetched by suites/build.py at the pinned commit, never committed
+suites/_src/
+suites/_build/
+detectors/_src/
+# screenshots of clone pages (look like vendor widgets even debranded; local eyes only)
+results/shots/
+.venv/
+__pycache__/
+detectors/page/creepjs

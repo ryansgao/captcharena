@@ -1,0 +1,79 @@
+{
+  "_about": "The open clone suites the harness runs (plan test set 2). Pinned commits; build.py fetches each into suites/_src/<name>/repo, copies the server part into suites/_build/<name>, strips vendor branding, applies our small patches and builds one container per suite. Licences read from the repos on 2026-11-03.",
+  "suites": {
+    "ocw": {
+      "title": "Open CaptchaWorld (MBZUAI et al., NeurIPS 2025 D&B)",
+      "repo": "https://github.com/MetaAgentX/OpenCaptchaWorld",
+      "commit": "66c0a3be5ab3432402b9f783b30f6bccc24826a6",
+      "commit_date": "2026-02-19",
+      "licence": "MIT (README statement only; the repo has no LICENSE file, checked 2026-11-03)",
+      "licence_ok": "local evaluation only, nothing redistributed; the MIT statement in the README is the grant",
+      "published": "2025-05-30",
+      "copy": [
+        "app.py",
+        "templates",
+        "static",
+        "captcha_data"
+      ],
+      "port": 7801,
+      "excluded_types": {},
+      "published_note": "2025-05 (arXiv 2505.24878)"
+    },
+    "nextgen": {
+      "title": "NextGen-CAPTCHAs (MetaAgentX, ICML 2026)",
+      "repo": "https://github.com/MetaAgentX/NextGen-CAPTCHAs",
+      "commit": "3961f1b92c89bbd4bd5f1ed002740810427fecba",
+      "commit_date": "2026-10-23",
+      "licence": "MIT (LICENSE file)",
+      "licence_ok": "yes",
+      "published": "2026-02-10",
+      "copy": [
+        "app.py",
+        "templates",
+        "static",
+        "captcha_data",
+        "captcha_generation"
+      ],
+      "port": 7802,
+      "excluded_types": {},
+      "published_note": "2026-02 (arXiv 2602.09012)"
+    },
+    "halligan": {
+      "title": "Halligan benchmark (USENIX Security 2025)",
+      "repo": "https://github.com/code-philia/Halligan",
+      "commit": "31cba3bd28f0ee2aa5a7002abae586e2bfb6ad2f",
+      "commit_date": "2026-09-07",
+      "licence": "MIT (LICENSE file)",
+      "licence_ok": "yes; challenge images are replicas of deployed vendor challenges, so this lane stays local (never served on the hub)",
+      "published": "2025-08-13",
+      "copy_from": "benchmark",
+      "copy": [
+        "server.py",
+        "apis",
+        "static"
+      ],
+      "port": 7803,
+      "excluded_types": {
+        "hcaptcha": "hCaptcha is never run by agents in this project (its terms forbid AI passing its challenges; CLAUDE.md)"
+      },
+      "published_note": "2025-08 (USENIX Security 2025)"
+    },
+    "hll": {
+      "title": "HLL, Humanity's Last Line of Verification (2026)",
+      "repo": "https://github.com/XinhaoS0101/HLL",
+      "commit": "cbd77178186f59e7ae7834380f76d9e79b54d939",
+      "commit_date": "2026-05-19",
+      "licence": "MIT (LICENSE file)",
+      "licence_ok": "yes; photo types use the images shipped in the repo (no Unsplash/Pexels keys set)",
+      "published": "2026-06-02",
+      "copy": [
+        "web"
+      ],
+      "port": 7810,
+      "excluded_types": {
+        "hcaptcha": "real hCaptcha widget with a site key: never run by agents in this project (CLAUDE.md)"
+      },
+      "published_note": "2026-06 (arXiv 2606.02449)"
+    }
+  }
+}
