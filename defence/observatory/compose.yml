@@ -1,0 +1,27 @@
+# Signed-agent observatory (C4). Deployed to the hosting server from the owner's machine (`deploy-tool deploy
+# captcha-observatory`); public at observatory.captcharena.org through the shared tunnel. .env (never in git) holds
+# OBSERVATORY_AGENT_JWK_B64, the private key of the site's own test agent; the SQLite store is the volume `data`.
+services:
+  observatory:
+    build: .
+    image: captcha-observatory:local
+    ports: ["127.0.0.1:${OBSERVATORY_PORT:-8320}:8000"]
+    env_file: [.env]
+    environment:
+      OBSERVATORY_DB: /data/observatory.sqlite
+      PUBLIC_ORIGIN: https://observatory.captcharena.org
+    volumes: [data:/data]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+    pids_limit: 100
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8000/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 30s
+      timeout: 6s
+      retries: 3
+volumes:
+  data:

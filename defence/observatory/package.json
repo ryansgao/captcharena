@@ -1,0 +1,21 @@
+{
+  "name": "captcharena-observatory",
+  "version": "1.0.0",
+  "description": "Signed-agent observatory: verifies Web Bot Auth signatures on every visit and publishes aggregate adoption and compliance.",
+  "main": "src/server.mjs",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "http-message-sig": "0.3.0",
+    "structured-headers": "2.0.3",
+    "web-bot-auth": "0.2.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  }
+}
