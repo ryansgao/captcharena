@@ -1,5 +1,5 @@
 // CAPTCHArena: fills #live-summary from the measurement service's aggregate JSON when it exists.
-// Without it (404, network error, CORS, bad JSON) the static warm-up text already in the page stays as is.
+// Without result rows (warm-up, 404, network error, CORS, bad JSON) the static warm-up text already in the page stays as is.
 // Builds DOM nodes with textContent only: nothing from the response is ever parsed as HTML.
 (function () {
   "use strict";
@@ -46,25 +46,18 @@
     return t;
   }
 
+  // Renders only when the feed carries result rows. A feed with metadata but no rows (the warm-up) keeps the
+  // static warm-up text, so visitors never see bare field names.
   function render(data) {
+    var rows = laneRows(data.lanes || data.by_lane || data.results || data.rows);
+    if (!rows.length) return false;
     var frag = document.createDocumentFragment();
-    var when = data.generated_at || data.updated_at || data.as_of || data.time;
+    var when = data.generated_at || data.generated || data.updated_at || data.as_of || data.time;
     var head = el("p", "Live from the measurement service" + (when ? ", generated " + fmt(when) : "") + ".");
     head.className = "meta";
     frag.appendChild(head);
     if (data.note || data.message) frag.appendChild(el("p", data.note || data.message));
-    var rows = laneRows(data.lanes || data.by_lane || data.results);
-    if (rows.length) frag.appendChild(table(rows));
-    var rest = Object.keys(data).filter(function (k) {
-      return ["lanes", "by_lane", "results", "note", "message", "generated_at", "updated_at", "as_of", "time"].indexOf(k) < 0 &&
-        (data[k] === null || typeof data[k] !== "object");
-    });
-    if (rest.length) {
-      var dl = el("dl");
-      rest.forEach(function (k) { dl.appendChild(el("dt", label(k))); dl.appendChild(el("dd", fmt(data[k]))); });
-      frag.appendChild(dl);
-    }
-    if (!rows.length && !rest.length) return false;
+    frag.appendChild(table(rows));
     out.textContent = "";
     out.appendChild(frag);
     return true;
