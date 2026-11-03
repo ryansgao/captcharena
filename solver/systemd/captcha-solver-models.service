@@ -1,0 +1,8 @@
+[Unit]
+Description=CAPTCHA solver: daily free-model (step 4) measurement in the local lab (projects/captcha/solver)
+
+[Service]
+Type=oneshot
+WorkingDirectory=solver
+ExecStart=solver/daily-models.sh
+TimeoutStartSec=2h
