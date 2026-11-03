@@ -3,20 +3,26 @@
  "broken_threshold": 0.5,
  "half_life": {
   "random": {
-   "defences": 63,
-   "broken": 2,
+   "defences": 97,
+   "broken": 5,
+   "half_life_days": null,
+   "half_life": "not reached"
+  },
+  "tiered": {
+   "defences": 97,
+   "broken": 1,
    "half_life_days": null,
    "half_life": "not reached"
   },
   "v0": {
-   "defences": 3,
+   "defences": 100,
    "broken": 2,
-   "half_life_days": 146,
-   "half_life": "146 days"
+   "half_life_days": null,
+   "half_life": "not reached"
   },
   "any": {
-   "defences": 66,
-   "broken": 4,
+   "defences": 100,
+   "broken": 8,
    "half_life_days": null,
    "half_life": "not reached"
   }
@@ -79,8 +85,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/amazon",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/amazon",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/multichoice/card",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/card",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/card",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -107,6 +169,34 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/arkose/multichoice/counting",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/counting",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/multichoice/dice_pair",
    "solver": "random",
    "since": "2025-08-13",
@@ -114,6 +204,34 @@
     [
      "2026-11-03",
      0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/dice_pair",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/dice_pair",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
      3
     ]
    ],
@@ -135,8 +253,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/arkose/multichoice/galaxies",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/galaxies",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/multichoice/hand_number",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/hand_number",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/hand_number",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -163,8 +337,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/arkose/multichoice/rotated",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/rotated",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/multichoice/square_icon",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/square_icon",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/multichoice/square_icon",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -191,8 +421,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/arkose/paged/3d_rollball_objects",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/3d_rollball_objects",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/paged/dice_match",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/dice_match",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/dice_match",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -219,6 +505,34 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/arkose/paged/numbermatch",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/numbermatch",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/paged/orbit_match_game",
    "solver": "random",
    "since": "2025-08-13",
@@ -233,8 +547,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/arkose/paged/orbit_match_game",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/orbit_match_game",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/arkose/paged/rockstack",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/rockstack",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/arkose/paged/rockstack",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -261,8 +631,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/baidu",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/baidu",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/botdetect",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/botdetect",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.667,
+     3
+    ]
+   ],
+   "first_broken": "2026-11-03",
+   "days_since_first_broken": 1
+  },
+  {
+   "defence": "halligan/botdetect",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -289,8 +715,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/geetest/gobang",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/gobang",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/geetest/icon",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/icon",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/icon",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -317,8 +799,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/geetest/iconcrush",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/iconcrush",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/geetest/slide",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/slide",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/geetest/slide",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -345,8 +883,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/lemin",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/lemin",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/mtcaptcha",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/mtcaptcha",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/mtcaptcha",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -373,8 +967,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/recaptchav2",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/recaptchav2",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/tencent",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/tencent",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/tencent",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -401,8 +1051,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "halligan/yandex/kaleidoscope",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/yandex/kaleidoscope",
+   "solver": "v0",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "halligan/yandex/text",
    "solver": "random",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/yandex/text",
+   "solver": "tiered",
+   "since": "2025-08-13",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "halligan/yandex/text",
+   "solver": "v0",
    "since": "2025-08-13",
    "trend": [
     [
@@ -429,6 +1135,34 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/click",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/click_anywhere",
    "solver": "random",
    "since": "2026-06-02",
@@ -443,8 +1177,64 @@
    "days_since_first_broken": 1
   },
   {
+   "defence": "hll/click_anywhere",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_anywhere",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/click_icon",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_icon",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_icon",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -471,8 +1261,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/click_icon_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_icon_dynamic",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/click_real",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_real",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_real",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -499,6 +1345,34 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/click_real_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_real_dynamic",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/click_trace",
    "solver": "random",
    "since": "2026-06-02",
@@ -513,8 +1387,64 @@
    "days_since_first_broken": 1
   },
   {
+   "defence": "hll/click_trace",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/click_trace",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/five_line",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/five_line",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/five_line",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -541,8 +1471,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/five_line_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/five_line_dynamic",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/image_grid",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/image_grid",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/image_grid",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -569,8 +1555,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/image_grid_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/image_grid_dynamic",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/logic_arithmetic_dynamic",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/logic_arithmetic_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/logic_arithmetic_dynamic",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -597,6 +1639,34 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/missing_piece",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/missing_piece",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/missing_piece_dynamic",
    "solver": "random",
    "since": "2026-06-02",
@@ -611,8 +1681,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/missing_piece_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/missing_piece_dynamic",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/pic_puzzle",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -639,8 +1765,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/pic_puzzle_click",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle_click",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/pic_puzzle_dynamic",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/pic_puzzle_dynamic",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -667,8 +1849,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/puzzle",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/puzzle_real",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle_real",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle_real",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -695,8 +1933,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/puzzle_real_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/puzzle_real_dynamic",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/slider",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -723,8 +2017,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/slider_real",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider_real",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/slider_real_dynamic",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider_real_dynamic",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/slider_real_dynamic",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -751,8 +2101,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "hll/text",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/text",
+   "solver": "v0",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "hll/text_trace",
    "solver": "random",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/text_trace",
+   "solver": "tiered",
+   "since": "2026-06-02",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "hll/text_trace",
+   "solver": "v0",
    "since": "2026-06-02",
    "trend": [
     [
@@ -779,8 +2185,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "nextgen/3D_Viewpoint",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/3D_Viewpoint",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "nextgen/Backmost_Layer",
    "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Backmost_Layer",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Backmost_Layer",
+   "solver": "v0",
    "since": "2026-02-10",
    "trend": [
     [
@@ -807,8 +2269,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "nextgen/Box_Folding",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Box_Folding",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "nextgen/Color_Counting",
    "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Color_Counting",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Color_Counting",
+   "solver": "v0",
    "since": "2026-02-10",
    "trend": [
     [
@@ -835,8 +2353,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "nextgen/Dice_Roll_Path",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Dice_Roll_Path",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "nextgen/Dynamic_Jigsaw",
    "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Dynamic_Jigsaw",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Dynamic_Jigsaw",
+   "solver": "v0",
    "since": "2026-02-10",
    "trend": [
     [
@@ -863,8 +2437,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "nextgen/Hole_Counting",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Hole_Counting",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "nextgen/Illusory_Ribbons",
    "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Illusory_Ribbons",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Illusory_Ribbons",
+   "solver": "v0",
    "since": "2026-02-10",
    "trend": [
     [
@@ -891,8 +2521,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "nextgen/Layered_Stack",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Layered_Stack",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "nextgen/Mirror",
    "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Mirror",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Mirror",
+   "solver": "v0",
    "since": "2026-02-10",
    "trend": [
     [
@@ -919,8 +2605,64 @@
    "days_since_first_broken": null
   },
   {
+   "defence": "nextgen/Multi_Script",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Multi_Script",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
    "defence": "nextgen/Occluded_Pattern_Counting",
    "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Occluded_Pattern_Counting",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Occluded_Pattern_Counting",
+   "solver": "v0",
    "since": "2026-02-10",
    "trend": [
     [
@@ -940,7 +2682,1463 @@
     [
      "2026-11-03",
      0.0,
-     2
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Red_Dot",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Red_Dot",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Rotation_Match",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Rotation_Match",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Rotation_Match",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Shadow_Direction",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Shadow_Direction",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Shadow_Direction",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Shadow_Plausible",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Shadow_Plausible",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Shadow_Plausible",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Circle",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Circle",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Circle",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Circle_Grid",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Circle_Grid",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Circle_Grid",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Jigsaw",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Jigsaw",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Jigsaw",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Shape_Grid",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Shape_Grid",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Shape_Grid",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Size",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Size",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Size",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Text",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Text",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Spooky_Text",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Static_Jigsaw",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     1
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Static_Jigsaw",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     1
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Static_Jigsaw",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     1
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Structure_From_Motion",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Structure_From_Motion",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Structure_From_Motion",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Subway_Paths",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Subway_Paths",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Subway_Paths",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Temporal_Object_Continuity",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Temporal_Object_Continuity",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Temporal_Object_Continuity",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Trajectory_Recovery",
+   "solver": "random",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Trajectory_Recovery",
+   "solver": "tiered",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "nextgen/Trajectory_Recovery",
+   "solver": "v0",
+   "since": "2026-02-10",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Bingo",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Bingo",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Bingo",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Click_Order",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Click_Order",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Click_Order",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Connect_icon",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Connect_icon",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Connect_icon",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Coordinates",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Coordinates",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Coordinates",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Dart_Count",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Dart_Count",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Dart_Count",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Dice_Count",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Dice_Count",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Dice_Count",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Geometry_Click",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Geometry_Click",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Geometry_Click",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Hold_Button",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.667,
+     3
+    ]
+   ],
+   "first_broken": "2026-11-03",
+   "days_since_first_broken": 1
+  },
+  {
+   "defence": "ocw/Hold_Button",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Hold_Button",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Image_Matching",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Image_Matching",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Image_Matching",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Image_Recognition",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Image_Recognition",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Image_Recognition",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Misleading_Click",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.667,
+     3
+    ]
+   ],
+   "first_broken": "2026-11-03",
+   "days_since_first_broken": 1
+  },
+  {
+   "defence": "ocw/Misleading_Click",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Misleading_Click",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Object_Match",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.667,
+     3
+    ]
+   ],
+   "first_broken": "2026-11-03",
+   "days_since_first_broken": 1
+  },
+  {
+   "defence": "ocw/Object_Match",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Object_Match",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Patch_Select",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Patch_Select",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Patch_Select",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Path_Finder",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Path_Finder",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Path_Finder",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Pick_Area",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.333,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Pick_Area",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Pick_Area",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Place_Dot",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Place_Dot",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Place_Dot",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Rotation_Match",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Rotation_Match",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Rotation_Match",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Select_Animal",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Select_Animal",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Select_Animal",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Slide_Puzzle",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Slide_Puzzle",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Slide_Puzzle",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Unusual_Detection",
+   "solver": "random",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Unusual_Detection",
+   "solver": "tiered",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
+    ]
+   ],
+   "first_broken": null,
+   "days_since_first_broken": null
+  },
+  {
+   "defence": "ocw/Unusual_Detection",
+   "solver": "v0",
+   "since": "2025-05-30",
+   "trend": [
+    [
+     "2026-11-03",
+     0.0,
+     3
     ]
    ],
    "first_broken": null,

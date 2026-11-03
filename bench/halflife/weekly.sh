@@ -21,7 +21,7 @@ LOG="results/halflife/tick-$DATE.log"
   docker compose -f suites/compose.yml up -d
   .venv/bin/python harness/bench.py selftest; S=$?
   .venv/bin/python harness/bench.py run --solver random,v0,tiered --sample halflife/frozen-sample-v1.json \
-      --run-id "$DATE-$KIND" ${BENCH_LIMIT:+--limit "$BENCH_LIMIT"}; R=$?
+      --run-id "$DATE-$KIND" ${BENCH_LIMIT:+--limit "$BENCH_LIMIT"} ${BENCH_SUITE:+--suite "$BENCH_SUITE"}; R=$?
   .venv/bin/python detectors/run.py; D=$?
   .venv/bin/python halflife/compute.py; C=$?
   printf '{"start":"%s","end":"%s","selftest":%s,"run":%s,"detectors":%s,"compute":%s}\n' \
