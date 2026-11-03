@@ -143,7 +143,13 @@ function setupTurnstile(cfg) {
       sitekey: ts.site, action: "measure",
       "before-interactive-callback": () => { interactive = true; document.body.dataset.challenged_turnstile = "1"; },
       callback: token => verify("turnstile", token, { solve_ms: Math.round(performance.now() - t), interactive }),
-      "error-callback": code => { setVerdict("turnstile", "widget error " + code, "fail"); return true; },
+      "error-callback": code => {
+        setVerdict("turnstile", "widget error " + code, "fail");
+        // For the runner: no token, so nothing reaches our server; the code is the outcome (a later retry may pass).
+        if (!document.body.dataset.done_turnstile) document.body.dataset.done_turnstile = "widget-error";
+        document.body.dataset.result_turnstile = JSON.stringify({ widget_error: String(code), interactive });
+        return true;
+      },
     });
   };
   loadScript("https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=__onTurnstile")
