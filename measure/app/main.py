@@ -27,7 +27,9 @@ from fastapi.staticfiles import StaticFiles
 
 HERE = pathlib.Path(__file__).parent
 LOG = pathlib.Path(os.environ.get("MEASURE_LOG", "/data/runs.jsonl"))
-VERSION = os.environ.get("MEASURE_VERSION", "dev")
+# The commit this build came from: `deploy-tool deploy` writes .deployed ("<sha> <time>") into the build folder.
+_deployed = HERE.parent / ".deployed"
+VERSION = os.environ.get("MEASURE_VERSION") or (_deployed.read_text().split()[0] if _deployed.exists() else "dev")
 
 # Vendor test keys: they always pass and measure nothing. Used until the real keys exist; marked in every line.
 TEST_SITE_KEYS = {"6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", "1x00000000000000000000AA", "2x00000000000000000000AB",
