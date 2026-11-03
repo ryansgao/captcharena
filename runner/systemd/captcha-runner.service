@@ -1,0 +1,17 @@
+# Oneshot half of the browser-score experiment's runner (projects/captcha/runner/run.py batch).
+# One batch = RUNNER_PER_BATCH page loads (default 2), 2.5-4 min apart, arms in block-randomised order, under the
+# runner's own daily budget (100 loads per UTC day) and the page's runner pool. Kill switch: touch
+# projects/captcha/runner/OFF (or $CAPTCHA_KILL_DIR/captcha-runner). Log: runner/state/runner.log and the journal.
+# Source: this file; installed as a symlink in ~/.config/systemd/user/. Paired with captcha-runner.timer.
+[Unit]
+Description=CAPTCHA browser-score experiment: one batch of page loads (projects/captcha/runner/run.py)
+Documentation=file://runner/README.md
+After=claude-browser.service agent-browser-broker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=runner
+Environment=PATH=~/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=runner/run.py batch
+TimeoutStartSec=25min
+Nice=5
