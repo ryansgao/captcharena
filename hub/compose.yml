@@ -1,0 +1,19 @@
+# CAPTCHArena hub (captcharena.org, www → apex). Static site, no secrets, no state. Deployed to the hosting server by
+# the owner's machine (`deploy-tool deploy captcha-hub <this folder> 8310 --health /health --host …`).
+services:
+  hub:
+    build: .
+    image: captcha-hub:local
+    ports: ["127.0.0.1:${HUB_PORT:-8310}:8080"]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp:size=16m"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+    pids_limit: 100
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

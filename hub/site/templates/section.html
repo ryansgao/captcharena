@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+  <header class="page-head">
+    <h1>{{ section.title }}</h1>
+    {%- if section.description %}<p class="lede">{{ section.description }}</p>{% endif %}
+    {%- if section.extra.checked %}<p class="checked">Facts on this page checked {{ section.extra.checked }}</p>{% endif %}
+  </header>
+  <div class="prose">
+  {{ section.content | safe }}
+  </div>
+  {%- if section.pages | length > 0 %}
+  <section class="cards" aria-labelledby="in-section">
+    <h2 id="in-section">Pages in {{ section.title }}</h2>
+    <ul>
+    {%- for p in section.pages %}
+      <li><a href="{{ p.permalink }}"><strong>{{ p.title }}</strong></a>{% if p.extra.status %} <span class="status">{{ p.extra.status }}</span>{% endif %}<br><span>{{ p.description }}</span></li>
+    {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+</article>
+{% endblock content %}
+{% block scripts %}{% if section.extra.script %}<script src="{{ get_url(path='assets/' ~ section.extra.script, cachebust=true) }}" defer></script>{% endif %}{% endblock scripts %}
