@@ -1,8 +1,8 @@
 [Unit]
-Description=CAPTCHA solver: daily free-model (step 4) measurement in the local lab (projects/captcha/solver)
+Description=CAPTCHA solver: daily free-model (step 4) measurement in the local lab (solver/)
 
 [Service]
 Type=oneshot
-WorkingDirectory=solver
-ExecStart=solver/daily-models.sh
+EnvironmentFile=%h/.config/captcha/env
+ExecStart=/bin/sh -c 'exec "$CAPTCHA_ROOT/solver/daily-models.sh"'
 TimeoutStartSec=2h

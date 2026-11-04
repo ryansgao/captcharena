@@ -18,3 +18,15 @@ Agent-facing status. Last updated 2026-11-04. One-page overview for the owner (k
 
 Next, in order: gap-discovery engine → C7 process-check Anchor → C2 private scoring → solver picture grids → essay with
 our data (the owner checks before publishing). Status of each part lives in its folder's README.
+
+## Local settings
+
+Machine-specific values stay out of the repo. The systemd units read `~/.config/captcha/env`:
+
+| Variable | Used by | Meaning |
+|---|---|---|
+| `CAPTCHA_ROOT` | all units | absolute path of this checkout |
+| `CAPTCHA_KILL_DIR` | runner, solver | optional second folder for kill-switch files |
+| `CAPTCHA_V0_SOLVER` | bench | optional path to a private earlier solver ("v0"); the v0 lane is skipped without it |
+| `CAPTCHA_EXTRA_PATH` | bench | optional extra `PATH` entries (e.g. where `node` lives) |
+| `RUNNER_PROXY_N1` | runner | optional SOCKS5 proxy for the second-exit arm; the arm is dropped without it |

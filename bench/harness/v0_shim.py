@@ -17,7 +17,7 @@ import importlib.util
 import os
 import sys
 
-V0 = "<private v0 solver>"
+V0 = os.environ.get("CAPTCHA_V0_SOLVER", "")  # path to the private v0 solver; not part of this repo
 
 
 def main():

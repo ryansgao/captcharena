@@ -55,7 +55,7 @@ actually is, correct, release (go-captcha tolerates ±4 px and ±2°).
 
 | Provider | State |
 |---|---|
-| OpenRouter | **Key copied** from another project to a local secrets file (0600; a project Google account, $0 limit). Vision models that answered: `nvidia/nemotron-3.5-super-vl:free` (first in chain), `nemotron-3-nano-omni-30b-a3b-reasoning:free`, `dots-3-note-preview:free`, `openrouter/free`. Both Gemma 4 free models returned "rate-limited upstream" on every call. `inkling:free` 403 ("agentic harnesses only"). **50 requests per UTC day** without $10 of credit: the binding limit on how much step 4 could be measured |
+| OpenRouter | **Key copied** from another project to `a local secrets file (0600; a project Google account, $0 limit). Vision models that answered: `nvidia/nemotron-3.5-super-vl:free` (first in chain), `nemotron-3-nano-omni-30b-a3b-reasoning:free`, `dots-3-note-preview:free`, `openrouter/free`. Both Gemma 4 free models returned "rate-limited upstream" on every call. `inkling:free` 403 ("agentic harnesses only"). **50 requests per UTC day** without $10 of credit: the binding limit on how much step 4 could be measured |
 | Mistral | **No key.** Account created with the a project mailbox (password in the owner's password manager); the console says the Free plan does not activate API keys any more — only Pro / Pay-as-you-go. Free mode as described in our Oct research is gone |
 | Groq | **Blocked**: console and API both answer "Access denied. Please check your network settings." from this machine's exit |
 | Gemini | Not retried (refused a project Google account in Oct 2026) |
