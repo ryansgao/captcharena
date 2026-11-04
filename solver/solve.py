@@ -1,4 +1,4 @@
-#!/usr/bin/env -S uv run --project solver python
+#!/usr/bin/env -S uv run python
 """solve.py — the tiered CAPTCHA solver (a measurement and research harness, own browser, own domain and local clones).
 
     solve.py [solve] --url URL [--max-step N] [--headed] [--kinds k1,k2] [--series NAME]

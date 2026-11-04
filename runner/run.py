@@ -47,7 +47,8 @@ LOGF = STATE / "runner.log"
 QUEUE = STATE / "queue.json"
 PROFILES = STATE / "profiles"
 KEYF = STATE / "runner-key"
-OFF_FILES = [HERE / "OFF", pathlib.Path("$CAPTCHA_KILL_DIR/captcha-runner")]
+OFF_FILES = [HERE / "OFF"] + ([pathlib.Path(os.environ["CAPTCHA_KILL_DIR"]) / "captcha-runner"]
+                             if os.environ.get("CAPTCHA_KILL_DIR") else [])
 
 SITE = os.environ.get("MEASURE_URL", "https://measure.captcharena.org")
 SHARED_CDP = "http://127.0.0.1:9222"          # the automation browser, through the tab broker
@@ -75,11 +76,13 @@ ARMS = {
     "aged":      (dict(n=0, b=0, a=2, s=1, h=0, c=0, d=0, w=0), "chromium", {"profile": "aged-chromium"}),
     "headless":  (dict(n=0, b=5, a=3, s=0, h=0, c=0, d=1, w=0), "playwright-headless", {}),
     "exit-syd":  (dict(n=1, b=0, a=2, s=1, h=0, c=0, d=0, w=0), "chromium",
-                  {"profile": "aged-chromium-syd", "proxy": "socks5://<vpn-socks5-exit>:1080",
+                  {"profile": "aged-chromium-syd", "proxy": os.environ.get("RUNNER_PROXY_N1", ""),
                    "tz": "Australia/Sydney"}),
     "chrome":    (dict(n=0, b=1, a=2, s=1, h=0, c=0, d=0, w=0), "chrome", {"profile": "aged-chrome"}),
     "camoufox":  (dict(n=0, b=2, a=3, s=1, h=0, c=0, d=0, w=0), "camoufox", {"profile": "aged-camoufox"}),
 }
+if not ARMS["exit-syd"][2]["proxy"]:   # the second exit is a local setting; never run that arm unproxied
+    del ARMS["exit-syd"]
 
 
 def tag(arm, smoke=False):

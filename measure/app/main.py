@@ -277,7 +277,7 @@ ERROR_CODE = re.compile(r"^[a-z0-9-]{1,40}$")
 SCORE_BINS = ("0.0", "0.1", "0.3", "0.5", "0.7", "0.9", "1.0")
 MAX_CONDITIONS_PER_DAY_LANE = 60          # bound the feed: a visitor inventing ?c= values cannot bloat it
 FACTOR_LEVELS = {
-    "n": {"0": "private workspace's usual exit (a commercial VPN, home region, datacentre host)", "1": "another a commercial VPN exit (SOCKS5, Sydney, M247)",
+    "n": {"0": "usual exit (commercial VPN, datacentre address)", "1": "a second VPN exit in another country (SOCKS5)",
           "2": "home line (not run)", "3": "cellular (not run)", "4": "static ISP address (not run)"},
     "b": {"0": "Debian Chromium", "1": "Google Chrome stable", "2": "Camoufox (Firefox)", "3": "CloakBrowser",
           "5": "Playwright's bundled Chromium"},

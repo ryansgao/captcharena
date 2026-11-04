@@ -20,7 +20,8 @@ import sys
 import time
 
 BENCH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TIERED = "solver"
+TIERED = os.path.join(os.path.dirname(BENCH), "solver")
+V0_PATH = os.environ.get("CAPTCHA_V0_SOLVER", "")  # the private v0 solver; not part of this repo
 
 INTERACTIVE = ("button, [role=button], canvas, img, input, select, a, svg, [onclick], [draggable=true], "
                "[class*=slider i], [class*=btn i], [class*=option i], [class*=tile i], [class*=cell i], "
@@ -107,12 +108,12 @@ class V0Solver(Solver):
     calling agent's own eyes (a Claude model reading screenshots); the bench does not run that rung — the project
     keeps solver model calls off Claude — so v0 here is exactly what fires without a model."""
     name = "v0"
-    version = "captcha.py@" + subprocess.run(["git", "-C", "<private>", "log", "-1", "--format=%h", "--",
-                                              "<private v0 solver>"],
-                                             capture_output=True, text=True).stdout.strip()
+    version = "captcha.py@" + (subprocess.run(["git", "-C", os.path.dirname(V0_PATH) or ".", "log", "-1", "--format=%h",
+                                               "--", os.path.basename(V0_PATH)],
+                                              capture_output=True, text=True).stdout.strip() if V0_PATH else "absent")
 
     def available(self):
-        return (os.path.exists("<private v0 solver>"), "captcha.py missing")
+        return (bool(V0_PATH) and os.path.exists(V0_PATH), "CAPTCHA_V0_SOLVER not set or missing (private solver)")
 
     def solve(self, ctx):
         cmd = ["uv", "run", "--quiet", "--script", os.path.join(BENCH, "harness", "v0_shim.py"),
