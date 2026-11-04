@@ -30,3 +30,7 @@ Machine-specific values stay out of the repo. The systemd units read `~/.config/
 | `CAPTCHA_V0_SOLVER` | bench | optional path to a private earlier solver ("v0"); the v0 lane is skipped without it |
 | `CAPTCHA_EXTRA_PATH` | bench | optional extra `PATH` entries (e.g. where `node` lives) |
 | `RUNNER_PROXY_N1` | runner | optional SOCKS5 proxy for the second-exit arm; the arm is dropped without it |
+
+## Licence
+
+MIT (`LICENSE`). Third-party files under `*/vendor/` keep their own licences, in the `*-LICENSE` files beside them.
