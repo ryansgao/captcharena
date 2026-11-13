@@ -100,14 +100,3 @@ actually is, correct, release (go-captcha tolerates ±4 px and ±2°).
 - Step 2 does not retrain yet: labels are saved, nothing trains on them (the Salman & Bicakci half). Next: fine-tune
   ddddocr on `cache/labels/` once a type has ~200.
 - Open clones still to add: mCaptcha, Procaptcha, Halligan's 26 types (Arkose-style), Open CaptchaWorld.
-
-## Should be registered on the owner's machine (not edited from here)
-
-- the owner's private notes: the solver (this folder) as a feature of `prj-captcha`.
-- the owner's private notes: build steps 3 and 5 → `review`, evidence = this README + `runs/solver-runs.jsonl`.
-- the owner's private notes: wenlng/go-captcha-service (40★, Apache-2.0, 1.0.5 2026-03-07: used as the
-  lab's engine, one-shot checks, ±4 px / ±2° tolerances); lepture/captcha (python, 0.7.1: lab text generator);
-  ddddocr measured (43 % on lepture/captcha text, 0/20 slide_match on go-captcha, 0/10 click); GitHub Models
-  unreachable from the owner's machine.
-- `the private automation registry`: the daily `suite.sh models` timer, once built.
-- Mistral and Groq findings into the owner's private notes (both changed since Oct).

@@ -66,7 +66,7 @@ gains nothing. 97 types, 4,004 frozen tasks plus HLL's generators.
   cost, step, note. Answer endpoints are also blocked in the browser. A watchdog closes a tab whose raw input call
   hangs (seen on HLL form posts). Re-running a run id resumes it.
 - **`harness/browser.py`** — the bench's own browser, never the agents' one: the **replica** is `/usr/bin/chromium`
-  headed on a private Xvfb screen with the exact flags of the automation browser's launch flags, a throwaway profile, CDP on
+  headed on a private Xvfb screen with the exact launch flags of the shared automation browser, a throwaway profile, CDP on
   127.0.0.1, and every DNS name except localhost unresolvable (`--host-resolver-rules`). Not copied: the agent
   accounts' profile and the tab-groups extension.
 - **Solver adapters (`harness/solvers.py`)**

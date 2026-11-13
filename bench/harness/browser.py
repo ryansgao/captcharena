@@ -3,7 +3,7 @@ experiments in it, and a benchmark must not touch the agent accounts' profile.
 
 Setups ("rigs"), named in every result row:
   replica      the automation browser setup, copied: /usr/bin/chromium, headed, on a private virtual screen (Xvfb),
-               the same launch flags as the automation browser's launch flags, a fresh throwaway profile, CDP on 127.0.0.1.
+               the same launch flags as the automation browser, a fresh throwaway profile, CDP on 127.0.0.1.
                Solvers attach over CDP exactly as captcha.py attaches to the real one. This is "the browser our
                solver drives". Not copied: the agent accounts' profile (cookies, history) and the tab-groups
                extension.
@@ -26,7 +26,7 @@ CHROMIUM = "/usr/bin/chromium"
 DISPLAY = os.environ.get("BENCH_DISPLAY", ":88")
 SCREEN = "1440x900x24"
 OFFLINE_RULES = "MAP * ~NOTFOUND, EXCLUDE 127.0.0.1, EXCLUDE localhost"
-# Copied from the automation browser's launch flags (headed branch), 2026-11-03.
+# Copied from the automation browser's launch flags (headed mode), 2026-11-03.
 REPLICA_FLAGS = ["--password-store=basic", "--no-first-run", "--no-default-browser-check", "--start-maximized",
                  "--hide-crash-restore-bubble", "--disk-cache-size=268435456",
                  "--disable-background-timer-throttling", "--disable-backgrounding-occluded-windows",

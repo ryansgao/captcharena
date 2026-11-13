@@ -61,7 +61,7 @@ SPACING_S = (150, 240)                         # between loads: >= 2.5 min (deep
 DAILY_LOADS = int(os.environ.get("RUNNER_DAILY_LOADS", "100"))
 LOAD_TIMEOUT_S = 90
 
-# Flags the shared browser starts with , minus what only makes sense there
+# Flags the shared browser starts with, minus what only makes sense there
 # (--restore-last-session, the tab-group extension, --start-maximized under openbox -> an explicit window size).
 CHROMIUM_FLAGS = ["--password-store=basic", "--no-first-run", "--no-default-browser-check",
                   "--hide-crash-restore-bubble", "--disk-cache-size=268435456",
